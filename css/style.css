@@ -1,0 +1,96 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #007acc;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-top: 0.5rem;
+}
+
+.subtitle sup {
+    font-size: 0.8em;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+header li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Nav */
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 15px;
+    text-align: center;
+}
+nav ul li img {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid;
+}
+
+>>>>>>> 0528ec3 (First commit)
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+

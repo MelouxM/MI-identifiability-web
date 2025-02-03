@@ -19,9 +19,12 @@ In practice, two main approaches aim to bridge low-level neural activations to i
 1. The **where-then-what** approach first detects the subset of neurons that seems to be related to the behavior, and then tries to interpret the computations contained in these neurons. It it typically not possible to enumerate all possible circuits and interpretations, therefore methods such as **causal mediation analysis** (which identifies critical subgraphs by finding the subset of the network that carries information from the input to the output) and **activation maximization** (interpreting a component by looking at which inputs maximize its activations) are often employed. Metrics such as **circuit error** and **mapping consistency** are used to validate found interpretations.
 2. The **what-then-where** approach first hypothesizes the algorithm contained in the network (done by humans) and then tries to map model states to variables of the algorithms, using methods such as the gradient-based **Distributed Alignment Search (DAS)**. Found algorithms and mappings are validated using a single joint metric called **Interchange Intervention Accuracy (IIA)**, which measures **causal alignment** between the (algorithm, mapping) pair and the network.
 
-<div style="text-align: center;">
-    <img src="assets/where-what.svg" alt="A simplified example of MI approaches in a vision network." style="width: 100%;">
-</div>
+<figure style="text-align: center;">
+    <img src="assets/where-what.svg" alt="A visualization of the where-then-what and what-then-where approaches in a vision network." style="width: 100%;">
+    <figcaption>A simplified example of MI approaches used to extract the algorithm for rectangle detection in a vision network.</figcaption>
+</figure>
+
+This improves acc
 
 ---
 
@@ -39,9 +42,10 @@ Identifiability is the property that only one explanation fits the observed beha
 3. **Algorithmic Redundancy**:
    When hypothesizing algorithms first (e.g., XOR as ¬(A∧B)∧(A∨B)), we searched for neural implementations using causal alignment. Despite strict criteria (perfect intervention interchange accuracy), we found **2 different algorithms** and a minimum of **159 distinct neural implementations** across the network.
 
-<div style="text-align: center;">
+<figure style="text-align: center;">
     <img src="assets/xor_illustration.jpg" alt="An illustration of multiple valid explanations found in a XOR model." style="max-width: 100%;">
-</div>
+    <figcaption>Both approaches find multiple valid and incompatible explanations in a single XOR model.</figcaption>
+</figure>
 
 #### Underlying Causes
 - **Overparameterization**: Networks often have more neurons than needed for a task, enabling redundant computational pathways.
@@ -64,9 +68,10 @@ The existence of multiple valid explanations challenges assumptions in MI:
    When applied to large models, current MI methods cannot explore the entire search space of explanations. They rely on efficient search techniques which target one valid explanation by design. This may be the result of inductive bias, which is linked with the cognitive intuition that there should only exist one explanation for a given behavior. However, this assumption may not be true for neural networks due to training dynamics and architectural flexibility.
 
 
-<div style="text-align: center;">
-    <img src="assets/network_size.png" alt="X-axis: Hidden layer size (2 to 5 neurons). Y-axis: Number of explanations found in the where-then-what ('interpretations') and what-then-where ('mappings') approach (log scale). Larger networks admit exponentially more circuits and interpretations." style="max-width: 100%;">
-</div>
+<figure style="text-align: center;">
+    <img src="assets/network_size.png" alt="A graph illustrating how exponentially more explanations are found in larger networks." style="max-width: 100%;">
+    <figcaption>X-axis: Hidden layer size (2 to 5 neurons). Y-axis: Number of explanations found in the where-then-what ('interpretations') and what-then-where ('mappings') approach (log scale). Larger networks admit exponentially more circuits and interpretations.</figcaption>
+</figure>
 
 ---
 

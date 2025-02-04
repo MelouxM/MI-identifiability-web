@@ -24,7 +24,7 @@ We view a mechanistic explanation as the combination of two components:
 2. **The Circuit (Where)**: The subset of neurons and connections that implement the algorithm.
 
 <figure style="text-align: center;">
-    <img src="assets/comp_exp.svg" alt="A visualization of the computational explanation." style="width: 100%;">
+    <img src="assets/comp_expl.svg" alt="A visualization of the computational explanation." style="width: 100%;">
 </figure>
 
 For instance, in a vision model, the *what* could state that the model detects edges first, then corners, then combines these to detect shapes such as rectangles. Conversely, the *where* could describe that edge detection might be localized to specific neurons in early layers, while object recognition involves downstream connections.
@@ -123,7 +123,7 @@ Mechanistic Interpretability may not be a simple detective story, the search for
 ---
 
 ```bibtex
-@article{your_citation_key,
+@article{meloux2025iclr,
   author  = {Maxime Méloux and Silviu Maniu and François Portet and Maxime Peyrard},
   title   = {Everything, Everywhere, All at Once: Is Mechanistic Interpretability Identifiable?},
   journal = {The Thirteenth International Conference on Learning Representations},

@@ -54,31 +54,41 @@ main {
 
 .container {
     width: 90%;
-    max-width: 800px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
-/* Nav */
-
-nav ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-    padding: 0;
+/* Centering and spacing */
+.row {
+    display: flex;
     justify-content: center;
-    list-style-type: none;
-}
-nav ul li {
     text-align: center;
-    max-width: 150px;  /* Prevents overly large images */
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-nav ul li img {
-    width: 100%;  /* Ensures image scales to the container */
-    height: 100px; /* Set a consistent height */
-    object-fit: contain; /* Maintains the aspect ratio */
-    border: 1px solid;
+.row p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
+
+/* Styling for links */
+.row a {
+    display: inline-block;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Image styling */
+.row a img {
+    border: 1px solid #000;
+    height: 100px;
+    object-fit: contain;
+
 
 /* Footer */
 footer {

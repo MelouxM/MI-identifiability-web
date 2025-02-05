@@ -84,7 +84,7 @@ Our findings revealed:
    Even for a fixed algorithm found with IIA, it can be causally aligned with multiple incompatible subsets of neurons.
 
 <figure style="text-align: center;">
-    <img src="assets/xor_illustration.jpg" alt="An illustration of multiple valid explanations found in a XOR model." style="max-width: 100%;">
+    <img src="assets/xor_illustration.jpg" alt="An illustration of multiple valid explanations found in a XOR model." style="max-width: 80%;">
     <figcaption>Both approaches find multiple valid and incompatible explanations in a single XOR model.</figcaption>
 </figure>
 
@@ -110,7 +110,7 @@ The existence of multiple valid explanations challenges assumptions in MI:
 
 
 <figure style="text-align: center;">
-    <img src="assets/network_size.png" alt="A graph illustrating how exponentially more explanations are found in larger networks." style="max-width: 100%;">
+    <img src="assets/network_size.png" alt="A graph illustrating how exponentially more explanations are found in larger networks." style="max-width: 90%;">
     <figcaption>X-axis: Hidden layer size (2 to 5 neurons). Y-axis: Number of explanations found in the where-then-what ('interpretations') and what-then-where ('mappings') approach (log scale). Larger networks admit exponentially more circuits and interpretations.</figcaption>
 </figure>
 
